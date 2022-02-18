@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyup</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <input type="text" placeholder="Fruta" v-model="nuevaFruta" v-on:keyup.enter="agregarFruta">
+        <button v-on:click="agregarFruta">Agregar</button>
+        <!--Otra manera de usar on click con vue:-->
+        <!-- <button @click="agregarFruta">Agregar</button> -->
+
+        <ul>
+            <li v-for="fruta of frutas">
+                {{fruta.nombre}}
+                <input type="number" placeholder="Cantidad" v-model.number="fruta.cantidad">
+                <span v-if="fruta.cantidad === 0">Sin stock</span>
+            </li>
+        </ul>
+
+        <h4>Total: {{sumarFrutas}}</h4>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
