@@ -1,17 +1,20 @@
 <template>
-  <div class="mt-3 text-center">
-    <img alt="Vue logo" src="./assets/logo.png">
+  <div id="App" class="container mt-3  text-center">
     <CabeceraC></CabeceraC>
+    <br>
+    <ListaC></ListaC>
   </div>
 </template>
 
 <script>
 import CabeceraC from './components/CabeceraC.vue'
+import ListaC from './components/ListaC.vue'
 
 export default {
   name: 'App',
   components: {
-    CabeceraC
+    CabeceraC,
+    ListaC
   }
 }
 </script>

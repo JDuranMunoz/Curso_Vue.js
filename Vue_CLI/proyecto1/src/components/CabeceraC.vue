@@ -1,5 +1,8 @@
 <template>
-    <div class="text-center">
+    <div>
+        <br>
+        <img alt="Vue logo" src="@/assets/logo.png">
+        <br>
         <br>
         <h1>Frutas</h1>
     </div>
