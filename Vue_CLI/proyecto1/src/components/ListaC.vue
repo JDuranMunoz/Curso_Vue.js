@@ -7,7 +7,7 @@
                 <span class="badge bg-primary rounded-pill">{{item.cantidad}}</span>
             </li>
         </ul>
-        <button class="btn btn-danger" v-on:click="reiniciar">Reiniciar</button>
+        <button class="btn btn-danger" v-on:click="reiniciar">Reiniciar cantidades</button>
     </div>
 </template>
 
