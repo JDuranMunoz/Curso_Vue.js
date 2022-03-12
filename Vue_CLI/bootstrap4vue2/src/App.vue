@@ -14,6 +14,7 @@
               <b-nav-item :to="{name: 'home'}" active-class="active" exact>Home</b-nav-item>
               <b-nav-item :to="{name: 'about'}" active-class="active" exact>About</b-nav-item>
               <b-nav-item :to="{name: 'grid'}" active-class="active" exact>Grid</b-nav-item>
+              <b-nav-item :to="{name: 'cards'}" active-class="active" exact>Cards</b-nav-item>
             </b-navbar-nav>
           </b-collapse>
         
