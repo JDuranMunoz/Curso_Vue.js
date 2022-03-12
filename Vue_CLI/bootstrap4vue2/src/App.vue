@@ -15,6 +15,7 @@
               <b-nav-item :to="{name: 'about'}" active-class="active" exact>About</b-nav-item>
               <b-nav-item :to="{name: 'grid'}" active-class="active" exact>Grid</b-nav-item>
               <b-nav-item :to="{name: 'cards'}" active-class="active" exact>Cards</b-nav-item>
+              <b-nav-item :to="{name: 'form'}" active-class="active" exact>Form</b-nav-item>
             </b-navbar-nav>
           </b-collapse>
         
@@ -24,11 +25,9 @@
     </b-container>
     <!-- Navbar -->
 
-    <!-- Grid, Columnas responsivas [Row/Col] -->
     <b-container>
       <router-view/>
     </b-container>
-    <!-- Grid, Columnas responsivas [Row/Col] -->
 
       <!-- <router-view/> -->
   </div>

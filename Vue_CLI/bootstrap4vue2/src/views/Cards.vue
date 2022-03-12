@@ -1,5 +1,7 @@
 <template>
     <div class="mt-3">
+        <h2 class="text-center">Cards y Botones</h2>
+        
         <b-button variant="success">Texto</b-button>
         <b-button variant="danger">Texto</b-button>
         <b-button variant="warning">Texto</b-button>
