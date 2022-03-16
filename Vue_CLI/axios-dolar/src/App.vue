@@ -1,55 +1,54 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+  <div>
+    <!-- <v-app> es necesaria para usar Vuetify -->
+    <v-app>
 
-      <v-spacer></v-spacer>
+      <v-main>
+        <v-container>
+          <router-view/>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>open_in_new</v-icon>
-      </v-btn>
-    </v-app-bar>
+          <v-dialog
+            v-model="loading.estado"
+            hide-overlay
+            persistent
+            width="300"
+          >
+            <v-card
+              :color="loading.color"
+              dark
+            >
+              <v-card-text>
+                {{loading.titulo}}
+                <v-progress-linear
+                  indeterminate
+                  color="white"
+                  class="mb-0"
+                ></v-progress-linear>
+              </v-card-text>
+            </v-card>
+          </v-dialog>
 
-    <v-main>
-      <router-view/>
-    </v-main>
-  </v-app>
+        </v-container>
+      </v-main>
+    
+    </v-app>
+  </div>
+
 </template>
 
 <script>
+  import { mapState } from "vuex";
 
-export default {
-  name: 'App',
+  export default {
+    name: 'App',
+    data() {
+      return {
 
-  data: () => ({
-    //
-  }),
-};
+      }
+    },
+    computed: {
+      ...mapState(['loading'])
+    }
+  };
 </script>
